@@ -1,0 +1,21 @@
+parameters:
+    amii_user.registration_form_type.class: Amii\UserBundle\Form\Type\RegistrationFormType
+    amii_user_provider.class: Amii\UserBundle\Security\Core\User\FOSUBUserProvider
+    amii_user.login_listener.class: Amii\UserBundle\EventListener\LoginListener
+
+services:
+    amii_user.registration.form.type:
+        class: %amii_user.registration_form_type.class%
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: amii_user_registration }
+
+    amii_user_provider:
+        class: "%amii_user_provider.class%"
+        arguments: [@fos_user.user_manager, {facebook: facebookId}]
+
+    amii_user.login_listener:
+        class: %amii_user.login_listener.class%
+        arguments: [@security.context, @fos_user.user_manager]
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login, method: onSecurityInteractiveLogin }

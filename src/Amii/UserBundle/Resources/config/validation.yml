@@ -1,0 +1,8 @@
+Amii\UserBundle\Entity\User:
+    properties:
+        email:
+            - NotBlank: { groups: [Registration] }
+            - Email: { groups: [Registration] }
+        plainPassword:
+            - NotBlank: { groups: [Registration] }
+            - Length: { min: 8, groups: [Registration] }

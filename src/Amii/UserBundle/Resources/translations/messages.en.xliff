@@ -1,0 +1,30 @@
+<xliff version='1.2' xmlns='urn:oasis:names:tc:xliff:document:1.2'>
+    <file original='' source-language='en' target-language='en' datatype='plaintext'>
+        <body>
+            <trans-unit id='1'>
+                <source>title</source>
+                <target>Welcome</target>
+            </trans-unit>
+            <trans-unit id='2'>
+                <source>text1</source>
+                <target>Please log in or register!</target>
+            </trans-unit>
+            <trans-unit id='3'>
+                <source>text2</source>
+                <target>You have successfully logged in.</target>
+            </trans-unit>
+            <trans-unit id='4'>
+                <source>registration.full_name</source>
+                <target>Full name:</target>
+            </trans-unit>
+            <trans-unit id='5'>
+                <source>registration.phone</source>
+                <target>Phone:</target>
+            </trans-unit>
+            <trans-unit id='6'>
+                <source>facebook.link</source>
+                <target>Sign in with Facebook</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
